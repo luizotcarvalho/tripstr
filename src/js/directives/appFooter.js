@@ -1,5 +1,5 @@
-angular.module('todomvc')
-    .directive('tdFooter', function () {
+angular.module('app')
+    .directive('appFooter', function appFooter() {
         'use strict';
 
         return {

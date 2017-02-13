@@ -2,7 +2,7 @@
 (function () {
 	'use strict';
 
-	beforeEach(module('todomvc'));
+	beforeEach(module('app'));
 
 	describe('todoFocus directive', function () {
 		var scope, compile, browser;
@@ -14,7 +14,7 @@
 		}));
 
 		it('should focus on truthy expression', function () {
-			var el = angular.element('<input todo-focus="focus">');
+			var el = angular.element('<input app-focus="focus">');
 			scope.focus = false;
 
 			compile(el)(scope);

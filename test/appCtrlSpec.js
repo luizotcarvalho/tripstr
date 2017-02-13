@@ -6,7 +6,7 @@
 		var ctrl, scope, store;
 
 		// Load the module containing the app, only 'ng' is loaded by default.
-		beforeEach(module('todomvc'));
+		beforeEach(module('app'));
 
 		beforeEach(inject(function ($controller, $rootScope, localStorage) {
 			scope = $rootScope.$new();
@@ -21,7 +21,7 @@
 				localStorage.todos = todos;
 			};
 
-			ctrl = $controller('TodoCtrl', {
+			ctrl = $controller('AppCtrl', {
 				$scope: scope,
 				store: store
 			});
@@ -50,7 +50,7 @@
 
 			describe('being at /active', function () {
 				it('should filter non-completed', inject(function ($controller) {
-					ctrl = $controller('TodoCtrl', {
+					ctrl = $controller('AppCtrl', {
 						$scope: scope,
 						store: store,
 						$routeParams: {
@@ -65,7 +65,7 @@
 
 			describe('being at /completed', function () {
 				it('should filter completed', inject(function ($controller) {
-					ctrl = $controller('TodoCtrl', {
+					ctrl = $controller('AppCtrl', {
 						$scope: scope,
 						$routeParams: {
 							status: 'completed'
@@ -83,7 +83,7 @@
 			var ctrl;
 
 			beforeEach(inject(function ($controller) {
-				ctrl = $controller('TodoCtrl', {
+				ctrl = $controller('AppCtrl', {
 					$scope: scope,
 					store: store
 				});
@@ -118,7 +118,7 @@
 			var ctrl;
 
 			beforeEach(inject(function ($controller) {
-				ctrl = $controller('TodoCtrl', {
+				ctrl = $controller('AppCtrl', {
 					$scope: scope,
 					store: store
 				});

@@ -9,15 +9,15 @@
  */
 angular = require('angular');
 
-angular.module('todomvc')
-	.factory('todoStorage', function ($http, $injector) {
+angular.module('app')
+	.factory('appStorage', function ($http, $injector) {
 		'use strict';
 		return $injector.get('localStorage');
 	})
 	.factory('localStorage', function ($q) {
 		'use strict';
 
-		var STORAGE_ID = 'todos-angularjs';
+		var STORAGE_ID = 'app-angularjs';
 
 		var store = {
 			todos: [],

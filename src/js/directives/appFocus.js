@@ -7,12 +7,12 @@
 
 angular = require('angular');
 
-angular.module('todomvc')
-	.directive('todoFocus', function todoFocus($timeout) {
+angular.module('app')
+	.directive('appFocus', function appFocus($timeout) {
 		'use strict';
 
 		return function (scope, elem, attrs) {
-			scope.$watch(attrs.todoFocus, function (newVal) {
+			scope.$watch(attrs.appFocus, function (newVal) {
 				if (newVal) {
 					$timeout(function () {
 						elem[0].focus();

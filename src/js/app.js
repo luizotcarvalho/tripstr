@@ -8,19 +8,19 @@
 
 angular = require('angular');
 require('angular-route');
-require('../dist/templateCachePartials');
+require('./../../dist/templateCachePartials');
 
-angular.module('todomvc', ['ngRoute','todoPartials'])
+angular.module('app', ['ngRoute','appPartials'])
 	.config(function ($routeProvider) {
 		'use strict';
 
 		var routeConfig = {
-			controller: 'TodoCtrl',
-			templateUrl: '/partials/todomvc-index.html',
+			controller: 'AppCtrl',
+			templateUrl: '/partials/index.html',
 			resolve: {
-				store: ['todoStorage', function (todoStorage) {
+				store: ['appStorage', function (appStorage) {
 					// Get the correct module (API or localStorage).
-					return todoStorage;
+					return appStorage;
 				}]
 			}
 		};
@@ -33,8 +33,8 @@ angular.module('todomvc', ['ngRoute','todoPartials'])
 			});
 	});
 
-require('todoCtrl');
-require('todoStorage');
-require('todoFocus');
-require('todoEscape');
-require('footer');
+require('appCtrl');
+require('appStorage');
+require('appFocus');
+require('appEscape');
+require('appFooter');

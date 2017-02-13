@@ -7,8 +7,8 @@
  */
 angular = require('angular');
 
-angular.module('todomvc')
-	.controller('TodoCtrl', function TodoCtrl($scope, $routeParams, $filter, store) {
+angular.module('app')
+	.controller('AppCtrl', function AppCtrl($scope, $routeParams, $filter, store) {
 		'use strict';
 
 		var todos = $scope.todos = store.todos;
