@@ -1,6 +1,8 @@
 Tripstr
 =================
 
+![alt tag](https://raw.githubusercontent.com/luizotcarvalho/tripster/master/static/images/demo.png)
+
 Desafio de front-end Atech.
 
 Aplicação de cadastro de viagens utilizando AngularJs, Bootstrap, Bootstrap UI, Gulp, SASS e LocalStorage. 
