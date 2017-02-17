@@ -3,7 +3,8 @@ Tripstr
 
 Desafio de front-end Atech.
 
-Aplicação de cadastro de viagens utilizando AngularJs, Bootstrap, Bootstrap UI, Gulp, SASS e LocalStorage.
+Aplicação de cadastro de viagens utilizando AngularJs, Bootstrap, Bootstrap UI, Gulp, SASS e LocalStorage. 
+Projeto feito apartir do https://github.com/jhades/angularjs-gulp-example para agilizar a estruturação da build gulp.
 
 # Instalação
 
