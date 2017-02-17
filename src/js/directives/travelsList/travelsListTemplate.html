@@ -1,0 +1,25 @@
+<div class="tripstr-list">
+    <!-- TITULO -->
+    <div ng-show="model.travels.length" class="clearfix py-4">
+        <h1 class="mt-2 float-left">
+            <span class="hidden-sm-down">Minhas viagens</span>
+            <span class="hidden-sm-up">Viagens</span>
+        </h1>
+        <a ui-sref="form" class="tripstr-btn btn btn-primary btn-lg float-right" title="">Nova viagem</a>
+    </div>
+
+    <!-- LISTA DE VIAGENS -->
+    <div class="row">
+        <div class="col-md-6" ng-repeat="travel in model.travels">
+            <travel-card travel="travel"></travel-card>
+        </div>
+    </div>
+
+    <!-- CASO VAZIO -->
+    <div ng-hide="model.travels.length" class="empty p-5 text-center">
+        <img class="empty-icon" src="/dist/static/svgs/empty.svg" height="230" alt="">
+        <h2 class="empty-text mt-4 mb-2">Você ainda não tem nenhuma viagem :(</h2>
+        <p>Que tal começar a conhecer o mundo agora mesmo?</p>
+        <a href ui-sref="form" class="tripstr-btn btn btn-primary btn-lg mt-3" title="">Cadastrar nova viagem</a>
+    </div>
+</div>

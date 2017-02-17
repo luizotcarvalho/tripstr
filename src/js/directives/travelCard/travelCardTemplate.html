@@ -1,0 +1,36 @@
+<div class="tripstr-card card">
+    <!-- CAPA -->
+    <div title="Remover viagem" ng-click="model.remove(travel)" class="tripstr-card-top card-img-top" ng-style="{'background-color': get_vehicle_type(travel.vehicle_type_id).color}">
+        <i class=".tripstr-card-top-icon material-icons">{{get_vehicle_type(travel.vehicle_type_id).icon}}</i>
+
+        <div class="tripstr-card-top-remove">
+            <span class="card-link"><i class="material-icons">delete</i> Remover</span>
+        </div>
+    </div>
+
+    <div title="Editar viagem" ng-click="edit_travel(travel)">
+        <!-- TITULO -->
+        <div class="card-block">
+            <h4 class="card-title">{{travel.name}}</h4>
+            <h6 class="card-subtitle text-muted">
+                {{travel.date.from | date : "dd/MM HH:mm"}} - {{travel.date.to | date : "dd/MM HH:mm"}}</h6>
+        </div>
+
+        <!-- INFOS -->
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="tripstr-card-cities row text-center">
+                    <div class="col-sm-6 col-md-5">{{travel.origin}}</div>
+                    <div class="col-md-2 hidden-sm-down">
+                        <i class="material-icons">arrow_forward</i>
+                    </div>
+                    <div class="col-sm-6 col-md-5">{{travel.destination}}</div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <img class="tripstr-travelers mr-2" ng-repeat="traveler in travel.travelers" uib-tooltip="{{traveler.name}}" ng-src="{{traveler.avatar}}" alt="">
+                <small ng-hide="travel.travelers.length">Viagem fantasma</small>
+            </li>
+        </ul>
+    </div>
+</div>

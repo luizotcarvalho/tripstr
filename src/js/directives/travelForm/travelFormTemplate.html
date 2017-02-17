@@ -1,0 +1,81 @@
+<div class="tripstr-form">
+    <!-- TITULO -->
+    <div class="clearfix py-4">
+        <h1 class="mt-2">
+            <a ui-sref="index" class="mr-2" title=""><i class="material-icons align-baseline">arrow_back</i></a>
+            <span ng-hide="model.travel.id">Nova viagem</span>
+            <span ng-show="model.travel.id">Editar viagem</span>
+        </h1>
+    </div>
+
+    <!-- FORMULARIO -->
+	<form class="tripstr-form-box p-4 mb-4" ng-submit="model.save(model.travel, redirect_to_index)">
+
+        <div class="form-group row">
+            <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+            <div class="col-sm-10">
+                <input type="text" name="nome" class="form-control" ng-model="model.travel.name" placeholder="Ex: Viagem de férias" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label mt-4 pt-2">Itinerário</label>
+            <div class="tripstr-form-traveler-cities col-sm-5 col-md-4">
+                <label for="origin" class="text-uppercase text-muted mb-0"><small>Origem</small></label>
+                <input name="origin" type="text" ng-model="model.travel.origin" uib-typeahead="address for address in cities.get($viewValue) | limitTo: 8" class="form-control" required>
+            </div>
+
+            <div class="col-md-2 text-center hidden-sm-down"><i class="material-icons mt-4 pt-2">arrow_forward</i></div>
+
+            <div class="tripstr-form-traveler-cities col-sm-5 col-md-4">
+                <label for="destination" class="text-uppercase text-muted mb-0"><small>Destino</small></label>
+                <input name="destination" type="text" ng-model="model.travel.destination" uib-typeahead="address for address in cities.get($viewValue) | limitTo: 8" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label mt-4 pt-2">Data</label>
+            <div class="col-sm-5 col-md-4">
+                <label for="origin" class="text-uppercase text-muted mb-0"><small>De</small></label>
+                <input type="text" class="form-control" ng-click="from_open = true" datetime-picker="dd/MM/yyyy HH:mm" datepicker-options="datepickerOptions" ng-model="model.travel.date.from" is-open="from_open" required/>
+            </div>
+
+            <div class="col-md-2 text-center hidden-sm-down"><i class="material-icons mt-4 pt-2">remove</i></div>
+
+            <div class="col-sm-5 col-md-4">
+                <label for="destination" class="text-uppercase text-muted mb-0"><small>Até</small></label>
+                <input type="text" class="form-control" ng-click="to_open = true" datetime-picker="dd/MM/yyyy HH:mm" datepicker-options="datepickerOptions" ng-model="model.travel.date.to" is-open="to_open" required/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="vehicle" class="col-sm-2 col-form-label">Veículo</label>
+            <div class="col-sm-5 col-md-4">
+                <select name="vehicle" class="form-control input-large" ng-model="model.travel.vehicle_type_id" ng-options="type.id as type.name for type in model.vehicle_types" required>
+                    <option value="">Selecione um veículo</option>
+                </select>
+            </div>
+        </div>
+
+		<div class="form-group row">
+			<label class="col-2 col-form-label mt-2">Integrantes</label>
+            <div class="col-sm-10">
+                <div class="tripstr-form-traveler-item float-left mr-3 mb-3" uib-tooltip="Remover {{traveler.name}}" ng-repeat="traveler in model.travel.travelers">
+                    <img width="50" ng-src="{{traveler.avatar}}" alt="">
+                    <a href class="tripstr-form-traveler-item-remove rounded-circle" ng-click="model.remove_traveler(traveler)" title=""><i class="material-icons">close</i></a>
+                </div>
+
+                <a href class="tripstr-btn tripstr-form-traveler-add btn btn-primary btn-lg rounded-circle" ng-click="open_traveler_popup()">
+                    <i class="material-icons">add</i>
+                </a>
+            </div>
+		</div>
+
+        <div class="text-center mt-5">
+            <button type="submit" class="tripstr-btn btn btn-primary btn-lg">
+                <span ng-hide="model.travel.id">Cadastrar</span>
+                <span ng-show="model.travel.id">Salvar</span>
+            </button>
+        </div>
+	</form>
+</div>

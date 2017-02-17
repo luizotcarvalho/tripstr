@@ -1,0 +1,40 @@
+.container {
+    max-width: 800px;
+}
+
+.navbar {
+    border-bottom: 1px solid $color-gray-light;
+}
+
+.material-icons {
+    vertical-align: middle;
+}
+
+.open > .dropdown-menu {
+    display: block;
+}
+
+.modal-open {
+    > .modal {
+        opacity: 1;
+
+        .modal-dialog {
+            transform: translate(0, 0);
+        }
+    }
+
+    > .modal-backdrop {
+        opacity: .8;
+        background-color: #fff;
+    }
+}
+
+.modal-content {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, .3);
+}
+
+.tooltip.fade.in {
+    opacity: 1;
+}

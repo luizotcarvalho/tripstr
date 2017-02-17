@@ -1,0 +1,53 @@
+.tripstr-card {
+    cursor: pointer;
+    border-radius: 0;
+
+    &:hover {
+        box-shadow: 0 6px 8px rgba(0, 0, 0, .3);
+        transform: translateY(-5px);
+        transition: all 250ms ease-in-out;
+
+        .tripstr-card-top .tripstr-card-top-remove {
+            opacity: 1;
+        }
+    }
+
+    .tripstr-card-top {
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        color: #fff;
+        position: relative;
+        border-radius: 0;
+        background-image: url(/dist/static/images/pattern.png);
+
+        .tripstr-card-top-icon {
+            font-size: 50px;
+        }
+
+        .tripstr-card-top-remove {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .6);
+            transition: opacity 250ms ease-in-out;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+    .tripstr-card-cities {
+        width: 100%;
+    }
+
+    .tripstr-travelers {
+        float: left;
+        width: 32px;
+    }
+}

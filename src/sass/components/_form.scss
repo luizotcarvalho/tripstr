@@ -1,0 +1,42 @@
+.tripstr-form {
+    .tripstr-form-box {
+        border: 1px solid $color-gray-light;
+    }
+
+    .tripstr-form-traveler-cities {
+        a {
+            padding: 8px;
+            display: block;
+        }
+    }
+
+    .tripstr-form-traveler-add {
+        width: 50px;
+        height: 50px;
+        padding: 12px;
+    }
+
+    .tripstr-form-traveler-item {
+        position: relative;
+
+        &:hover {
+            .tripstr-form-traveler-item-remove {
+                opacity: 1;
+            }
+        }
+
+        .tripstr-form-traveler-item-remove {
+            transition: opacity 250ms ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .6);
+            line-height: 50px;
+            text-align: center;
+            opacity: 0;
+            color: #fff;
+        }
+    }
+}
