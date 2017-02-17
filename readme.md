@@ -1,6 +1,3 @@
-Tripstr
-=================
-
 ![alt tag](https://github.com/luizotcarvalho/tripstr/blob/master/static/images/demo.png?raw=true)
 
 Desafio de front-end Atech.
