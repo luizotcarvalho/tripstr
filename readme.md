@@ -10,9 +10,9 @@ Projeto feito apartir do https://github.com/jhades/angularjs-gulp-example para a
 
 Necessário node 6.x.x para funcionar corretamente.
 
-Primeiro, verifique se você já tem o gulp, se não tiver, instale:
+Primeiro, verifique se você já tem o gulp e bower, se não tiver, instale:
 
-    npm install -g gulp
+    npm install -g gulp bower
 
 Depois de clonar o projeto rode:
 
