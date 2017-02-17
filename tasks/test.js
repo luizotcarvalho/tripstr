@@ -1,3 +1,4 @@
+// Roda os teste da apliçao utilizando karma e jasmine
 module.exports = function (gulp, options, plugins) {
 	gulp.task('test', ['build-js'], function(done) {
 	    return gulp.src(options.paths.test.tests)

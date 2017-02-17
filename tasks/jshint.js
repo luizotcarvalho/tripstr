@@ -1,3 +1,4 @@
+// Verifica erros e inconsistencias no js
 module.exports = function (gulp, options, plugins) {
 	gulp.task('jshint', function() {
 	    gulp.src(options.paths.scripts.js.all)

@@ -1,17 +1,37 @@
 <!doctype html>
-<html lang="en" data-framework="angularjs">
+<html lang="pt-BR" data-framework="angularjs">
 	<head>
 		<meta charset="utf-8">
-		<title>AngularJS • TodoMVC</title>
+		<title>Tripstr</title>
+
+        <link rel="icon" type="image/png" href="/dist/static/images/favicon.png" />
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+        <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/dist/app.css">
 	</head>
 	<body>
+		<div ng-app="Tripstr" class="tripstr">
 
-		<div ng-app="app">
-			<ng-view />
+            <nav class="navbar navbar-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="/dist/static/svgs/tripstr.svg" height="30" alt="">
+                    </a>
+                </div>
+            </nav>
+
+            <div class="container">
+                <div class="tripstr-box">
+                    <ui-view />
+                </div>
+            </div>
+
+            <footer class="text-center p-5 text-center">
+                <small>Feito com <span class="text-danger">❤</span> por <a href="http://codepen.io/luizotcarvalho/" target="blank" title="Luiz Ot Carvalho">Luiz Ot Carvalho</a></small>
+            </footer>
 		</div>
 
         <script src="/dist/js/bundle.js"></script>
-
 	</body>
 </html>

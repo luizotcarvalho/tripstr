@@ -1,3 +1,16 @@
+// Escrevi menos código scss possível, procurei sempre utilizar as classes já existentes no Bootstrap
+// Se ficar um pouco difícil mensurar os conhecimentos na tecnologia, vale a pena dar uma olhada
+// no meu codepen: http://codepen.io/luizotcarvalho
+// La tem bastante coisa legal :)
 
-@import "base";
-@import "index";
+// global
+@import "core/variables";
+@import "core/base";
+@import "core/typo";
+@import "core/overwrites";
+
+// components
+@import "components/buttons";
+@import "components/card";
+@import "components/form";
+@import "components/form-popup";

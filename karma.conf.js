@@ -8,7 +8,7 @@ module.exports = function (config) {
 		files: [
             'dist/js/bundle*.js',
             'node_modules/angular-mocks/angular-mocks.js',
-            'test/*.js'
+            'src/js/**/*Spec.js'
 		],
 		autoWatch: true,
 		singleRun: false,

@@ -2,7 +2,7 @@
 (function () {
 	'use strict';
 
-	beforeEach(module('app'));
+	beforeEach(module('Tripstr'));
 
 	describe('todoFocus directive', function () {
 		var scope, compile, browser;
