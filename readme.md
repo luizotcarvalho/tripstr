@@ -7,6 +7,8 @@ Aplicação de cadastro de viagens utilizando AngularJs, Bootstrap, Bootstrap UI
 
 # Instalação
 
+Necessário node 6.x.x para funcionar corretamente.
+
 Primeiro, verifique se você já tem o gulp, se não tiver, instale:
 
     npm install -g gulp
